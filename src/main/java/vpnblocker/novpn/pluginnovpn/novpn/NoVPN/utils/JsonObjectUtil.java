@@ -15,7 +15,7 @@ public class JsonObjectUtil{
         Call call = client.newCall(request);
         Response response = call.execute();
         ResponseBody body = response.body();
-        JSONObject jobject = new JSONObject("");
-        return  jobject.get( "hoge" )+"";
+        JSONObject jobject = new JSONObject(body.string());
+        return  jobject.get("hoge");
     }
 }
